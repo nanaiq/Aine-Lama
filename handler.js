@@ -518,35 +518,35 @@ module.exports = {
                 if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
                 if (chat) {
                     if (!('isBanned' in chat)) chat.isBanned = false
-                    if (!('welcome' in chat)) chat.welcome = false
+                    if (!('welcome' in chat)) chat.welcome = true
                     if (!('detect' in chat)) chat.detect = false
                     if (!('sWelcome' in chat)) chat.sWelcome = ''
                     if (!('sBye' in chat)) chat.sBye = ''
                     if (!('sPromote' in chat)) chat.sPromote = ''
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('delete' in chat)) chat.delete = true
-                    if (!('antiLink' in chat)) chat.antiLink = false 
+                    if (!('antiLink' in chat)) chat.antiLink = true
                     if (!('antiSticker' in chat)) chat.antiSticker = false
                     if (!('stiker' in chat)) chat.stiker = false
-                    if (!('viewonce' in chat)) chat.viewonce = false
+                    if (!('viewonce' in chat)) chat.viewonce = true
                     if (!('useDocument' in chat)) chat.useDocument = false
-                    if (!('antiToxic' in chat)) chat.antiToxic = false
+                    if (!('antiToxic' in chat)) chat.antiToxic = true
                     if (!isNumber(chat.expired)) chat.expired = 0
                 } else global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: false,
+                    welcome: true,
                     detect: false,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    antiLink: false,
+                    antiLink: true,
                     stiker: false,
                     antiSticker: false,
-                    viewonce: false,
+                    viewonce: true,
                     useDocument: false,
-                    antiToxic: false,
+                    antiToxic: true,
                     expired: 0,
                 }
             } catch (e) {
