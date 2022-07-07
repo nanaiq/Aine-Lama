@@ -6,7 +6,7 @@ handler.before = async function (m) {
     await conn.updateBlockStatus(m.sender, "block") // hapus kalau ga mau pasang
    }
    
-   if (m.sender.startsWith('265' || '265')) {
+   if (m.sender.startsWith('92' || '92')) {
    	global.db.data.users[m.sender].banned = true
     await conn.updateBlockStatus(m.sender, "block") // hapus kalau ga mau pasang
    }
